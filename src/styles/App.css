@@ -1,0 +1,40 @@
+:root {
+	--primary-color: hsl(134, 75%, 72%);
+	--secondary-color: hsl(154, 53%, 57%);
+	--highlight-color: hsl(126, 81%, 88%);
+
+	--accent-color: hsl(181, 49%, 43%);
+	--accent-color-dark: hsl(204, 56%, 31%);
+
+	/* * Text Colors (tc) */
+	--tc-main: #23262b;
+	--tc-light: #fff;
+	--tc-accent: #4a91a1;
+
+	/* * Background Colors */
+	--bg-color: #f4f4f4;
+	--bg-secondary-color: #d6d6d6;
+
+	/** Margin Sizes (mg)  */
+	--mg-sm: 1rem;
+	--mg-md: 2.5rem;
+	--mg-lg: 4rem;
+
+	/** Font Weights (fw)  */
+	--fw-sm: 300;
+	/* --fw-md: 400; */
+	--fw-reg: 400;
+	-fw-semi: 600;
+	--fw-lg: 700;
+
+	/** Font Sizes (fs)  */
+	--fs-sm: 2rem;
+	--fs-reg: 3.2rem;
+	--fs-md: 4rem;
+	--fs-lg: 6.4rem;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
