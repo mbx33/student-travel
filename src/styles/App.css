@@ -11,7 +11,7 @@
 	--tc-light: #fff;
 	--tc-accent: #4a91a1;
 
-	/* * Background Colors */
+	/* * Background Colors (bg) */
 	--bg-color: #f4f4f4;
 	--bg-secondary-color: #d6d6d6;
 
@@ -37,4 +37,5 @@
 html {
 	font-size: 62.5%;
 	font-family: 'Poppins', sans-serif;
+	color: var(--tc-main);
 }
