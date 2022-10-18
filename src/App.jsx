@@ -1,14 +1,19 @@
 import './styles/App.css';
 import styled from 'styled-components';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { About, Contact, ErrorPage, Home, Tours } from './pages';
 
 function App() {
 	return (
-		<div>
-			<Navbar />
-			<Home />
-		</div>
+		<Router>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/contact" element={<Contact />} />
+				<Route path="/tours" element={<Tours />} />
+				<Route path="*" element={<ErrorPage />} />
+			</Routes>
+		</Router>
 	);
 }
 

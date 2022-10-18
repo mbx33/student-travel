@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GoThreeBars } from 'react-icons/go';
+import MenuLinks from './MenuLinks';
 
 const Navbar = () => {
 	return (
@@ -8,9 +9,7 @@ const Navbar = () => {
 			<div className="logo">Student Trips</div>
 			<div className="links">
 				<ul role="list">
-					<li>Tours</li>
-					<li>About</li>
-					<li>Contact</li>
+					<MenuLinks styled={{ display: 'flex' }} />
 					<li className="hamburger-nav">
 						<GoThreeBars />
 					</li>
@@ -44,16 +43,25 @@ const NavWrapper = styled.nav`
 
 		li {
 			cursor: pointer;
+			transition: 0.4s ease-out;
 
 			:hover,
 			:active {
 				color: var(--tc-light);
+				transition: 0.3s ease-in-out;
+			}
+			@media (max-width: 768px) {
+				display: none;
 			}
 		}
 
 		.hamburger-nav {
-			visibility: hidden;
+			display: none;
 			font-size: var(--fs-md);
+
+			@media (max-width: 768px) {
+				display: block;
+			}
 		}
 	}
 `;

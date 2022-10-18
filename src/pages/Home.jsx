@@ -1,21 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import InfoBox from '../components/InfoBox';
+import { Navbar, Sidebar } from '../components';
 
 const Home = () => {
 	return (
 		<Container>
-			<InfoBox />
+			<Navbar />
+			{/* <Sidebar /> */}
+			<h1>Home Page</h1>
 		</Container>
 	);
 };
 
 export default Home;
 
-const Container = styled.main`
-	height: 89vh;
-	background-color: #222;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
+const Container = styled.main``;
