@@ -1,17 +1,17 @@
-import React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { GoThreeBars } from 'react-icons/go';
 import MenuLinks from './MenuLinks';
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
 	return (
 		<NavWrapper>
 			<div className="logo">Student Trips</div>
 			<div className="links">
 				<ul role="list">
-					<MenuLinks styled={{ display: 'flex' }} />
+					<MenuLinks />
 					<li className="hamburger-nav">
-						<GoThreeBars />
+						<GoThreeBars onClick={toggle} />
 					</li>
 				</ul>
 			</div>
@@ -36,11 +36,13 @@ const NavWrapper = styled.nav`
 		font-size: var(--fs-reg);
 	}
 
-	.links ul {
+	.links div {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
+		gap: 1.5rem;
+	}
 
+	.links ul {
 		li {
 			cursor: pointer;
 			transition: 0.4s ease-out;

@@ -38,4 +38,5 @@ html {
 	font-size: 62.5%;
 	font-family: 'Merriweather', 'Poppins', sans-serif;
 	color: var(--tc-main);
+	overflow-x: hidden;
 }

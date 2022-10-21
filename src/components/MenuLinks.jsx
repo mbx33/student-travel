@@ -45,6 +45,10 @@ const MenuLinks = () => {
 export default MenuLinks;
 
 const ListWrap = styled.ul`
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+
 	li {
 		cursor: pointer;
 		color: var(--tc-accent);
@@ -57,9 +61,6 @@ const ListWrap = styled.ul`
 		:active {
 			color: var(--tc-light);
 			transition: 0.3s ease-in-out;
-		}
-		@media (max-width: 768px) {
-			display: none;
 		}
 	}
 `;

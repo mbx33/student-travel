@@ -3,18 +3,20 @@ import styled from 'styled-components';
 import MenuLinks from './MenuLinks';
 import { AiOutlineClose } from 'react-icons/ai';
 
-const Sidebar = () => {
+const Sidebar = ({ toggle, open }) => {
 	return (
 		<Container>
-			<TopMenu>
-				<p>Logo</p>
-				<Icon>
-					<AiOutlineClose />
-				</Icon>
-			</TopMenu>
-			<LinkWrapper>
-				<MenuLinks />
-			</LinkWrapper>
+			<div className={open ? 'sidebar show-sidebar' : 'sidebar'}>
+				<TopMenu>
+					<p>Logo</p>
+					<Icon>
+						<AiOutlineClose onClick={toggle} />
+					</Icon>
+				</TopMenu>
+				<LinkWrapper>
+					<MenuLinks />
+				</LinkWrapper>
+			</div>
 		</Container>
 	);
 };
@@ -22,13 +24,21 @@ const Sidebar = () => {
 export default Sidebar;
 
 const Container = styled.section`
-	width: 20vw;
-	height: 100vh;
-	background-color: var(--primary-color);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
+	.sidebar {
+		width: 50vw;
+		height: 100vh;
+		background-color: var(--primary-color);
+		position: absolute;
+		top: 0;
+		right: -70rem;
+		z-index: 1;
+		transition: 0.4s ease-out;
+	}
+
+	.show-sidebar {
+		right: 0;
+		display: block;
+	}
 `;
 
 const Icon = styled.div`
