@@ -1,7 +1,13 @@
 import React from 'react';
+import { NavLayout } from '../components';
 
 const About = () => {
-	return <div>About</div>;
+	return (
+		<div>
+			<NavLayout />
+			About
+		</div>
+	);
 };
 
 export default About;

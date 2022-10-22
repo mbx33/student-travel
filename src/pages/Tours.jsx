@@ -1,7 +1,13 @@
 import React from 'react';
+import { NavLayout } from '../components';
 
 const Tours = () => {
-	return <div>Tours</div>;
+	return (
+		<div>
+			<NavLayout />
+			Tours
+		</div>
+	);
 };
 
 export default Tours;
